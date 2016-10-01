@@ -98,7 +98,7 @@ html, body {
 
 .mdl-demo .mdl-card__actions {
   margin: 0;
-  padding: 4px 40px;
+  text-align: right;
   color: inherit;
 }
 
@@ -272,4 +272,8 @@ a.blur:hover {
 
 .mdl-layout__header-row {
   height: 128px;
+}
+
+.hidden-text {
+  display: none;
 }
