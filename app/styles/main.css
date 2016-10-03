@@ -257,23 +257,66 @@ html, body {
   z-index: 99;
 }
 
-.section__icon .material-icons {
+.mdl-demo .section__icon .material-icons {
   font-size: 36px;
   padding-top: 0.1em;
 }
 
-a.blur {
+.mdl-demo a.blur {
   filter: blur(3px)
 }
 
-a.blur:hover {
+.mdl-demo a.blur:hover {
   filter: none;
 }
 
-.mdl-layout__header-row {
+.mdl-demo .mdl-layout__header-row {
   height: 128px;
 }
 
-.hidden-text {
+.mdl-demo .hidden-text {
   display: none;
+}
+
+.mdl-demo .mdl-chip {
+  font-size: 1em;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 6px;
+}
+
+.mdl-demo .mdl-chip .mdl-chip__text {
+  font-size: 0.8em;
+}
+
+.mdl-demo .work-panel .mdl-card__title {
+  height: 55px;
+}
+
+.mdl-demo .work-panel .mdl-card__title img {
+  height: 100%;
+  padding-left: calc(40px - 16px);
+}
+
+.mdl-demo .work-panel .mdl-card__supporting-text .work-dates {
+  font-weight: 500;
+  margin-top: -0.7em;
+  margin-bottom: 1em;
+}
+
+.mdl-demo .work-panel .mdl-card__supporting-text {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.mdl-demo .work-panel .mdl-card__supporting-text>h5 {
+  margin-top: 0.7em;
+}
+
+.mdl-demo .work-panel .mdl-card__supporting-text ul {
+  margin-top: 0;
+}
+
+.mdl-demo ul a {
+  text-decoration: none;
 }
