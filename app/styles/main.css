@@ -181,7 +181,7 @@ html, body {
   text-decoration: none;
 }
 
-.mdl-demo section .section__text a.simple {
+.mdl-demo a {
   text-decoration: none;
   font-weight: normal;
   color: inherit;
@@ -315,8 +315,4 @@ html, body {
 
 .mdl-demo .work-panel .mdl-card__supporting-text ul {
   margin-top: 0;
-}
-
-.mdl-demo ul a {
-  text-decoration: none;
 }
