@@ -91,6 +91,10 @@ html, body {
   width: calc(100% - 80px);
 }
 
+.mdl-demo .mdl-card .mdl-card__title-text {
+  font-size: 1.3em;
+}
+
 .mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
   margin-top: 0;
   margin-bottom: 20px;
@@ -132,8 +136,8 @@ html, body {
   max-width: 860px;
 }
 
-.mdl-demo #features section.section--center {
-  max-width: 620px;
+.mdl-demo #education section.section--center {
+  max-width: 992px;
 }
 
 .mdl-demo section > header {
@@ -201,13 +205,6 @@ html, body {
   margin: 8px 32px;
 }
 
-.mdl-demo .is-small-screen section.section--footer .section__circle--big {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  margin: 8px 16px;
-}
-
 .mdl-demo section.section--footer {
   padding: 64px 0;
   margin: 0 -8px -8px -8px;
@@ -271,7 +268,7 @@ html, body {
 }
 
 .mdl-demo .mdl-layout__header-row {
-  height: 128px;
+  height: 96px;
 }
 
 .mdl-demo .hidden-text {
@@ -290,7 +287,8 @@ html, body {
 }
 
 .mdl-demo .work-panel .mdl-card__title {
-  height: 55px;
+  height: 60px;
+  padding-top: 24px;
 }
 
 .mdl-demo .work-panel .mdl-card__title img {
@@ -315,4 +313,74 @@ html, body {
 
 .mdl-demo .work-panel .mdl-card__supporting-text ul {
   margin-top: 0;
+}
+
+.mdl-demo .education-panel .mdl-card__supporting-text {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.mdl-demo .education-panel .education-dates {
+  margin-bottom: 1.3em;
+}
+
+.mdl-demo .education-panel .mdl-card__supporting-text h6 {
+  margin-top: 0.7em;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+
+.mdl-demo .education-panel university-section .mdl-card__supporting-text h5 {
+  margin-bottom: 0;
+}
+
+.mdl-demo university-section .mdl-card:last-child {
+  min-height: 50px;
+}
+
+.mdl-demo .education-panel .mdl-card {
+  min-height: 100px;
+}
+
+.mdl-demo .education-panel .mdl-card__actions {
+  text-align: left;
+  margin-left: 32px;
+  margin-right: 32px;
+  width: calc(100% - 64px);
+}
+
+.mdl-demo .education-panel #german-bar {
+  margin-bottom: 40px;
+}
+
+.mdl-demo .mdl-progress.progress-color--green>.progressbar {
+  background-color: #4CAF50;
+}
+
+.mdl-demo .mdl-progress.progress-color--green>.bufferbar {
+  background-image: none;
+  background-color: #C8E6C9;
+}
+
+.mdl-demo .mdl-progress.progress-color--lime>.progressbar {
+  background-color: #CDDC39;
+}
+
+.mdl-demo .mdl-progress.progress-color--lime>.bufferbar {
+  background-image: none;
+  background-color: #F0F4C3;
+}
+
+.mdl-demo .mdl-progress.progress-color--lime>.auxbar {
+  background-image: none;
+  background-color: #E6EE9C;
+}
+
+.mdl-demo .mdl-progress.progress-color--orange>.progressbar {
+  background-color: #FF9800;
+}
+
+.mdl-demo .mdl-progress.progress-color--orange>.bufferbar {
+  background-image: none;
+  background-color: #FFE0B2;
 }
