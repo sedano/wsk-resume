@@ -26,6 +26,51 @@ html, body {
   padding: 0;
 }
 
+
+/* Rules for sizing the icon. */
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+
+/* Rules for using icons as black on a light background. */
+
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+
+/* Rules for using icons as white on a dark background. */
+
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.material-icons.md-colored {
+  color: rgba(253, 216, 53, 1);
+}
+
 .mdl-demo .mdl-layout__header-row {
   padding-left: 40px;
 }
@@ -136,7 +181,7 @@ html, body {
   max-width: 860px;
 }
 
-.mdl-demo #education section.section--center {
+.mdl-demo .education-panel section.section--center {
   max-width: 992px;
 }
 
@@ -275,14 +320,14 @@ html, body {
   display: none;
 }
 
-.mdl-demo .mdl-chip {
+.mdl-demo .work-panel .mdl-chip {
   font-size: 1em;
   height: 24px;
   line-height: 24px;
   padding: 0 6px;
 }
 
-.mdl-demo .mdl-chip .mdl-chip__text {
+.mdl-demo .work-panel .mdl-chip .mdl-chip__text {
   font-size: 0.8em;
 }
 
