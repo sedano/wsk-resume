@@ -63,20 +63,20 @@
         <h3>Alejandro Sedano</h3>
       </div>
       <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-        <a href="#about" class="mdl-layout__tab">About me</a>
+        <a href="#about" class="mdl-layout__tab is-active">About me</a>
         <a href="#work" class="mdl-layout__tab">Experience</a>
+        <a href="#portfolio" class="mdl-layout__tab">Portfolio</a>
         <a href="#education" class="mdl-layout__tab">Education</a>
-        <a href="#portfolio" class="mdl-layout__tab is-active">Portfolio</a>
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent"
+        <button onclick="play()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent"
           id="add">
-            <i class="material-icons" role="presentation">add</i>
-            <span class="visuallyhidden">Add</span>
+            <i class="material-icons" role="presentation">videogame_asset</i>
+            <span class="visuallyhidden">Play</span>
           </button>
       </div>
     </header>
     <main class="mdl-layout__content">
 
-      <div class="mdl-layout__tab-panel" id="about">
+      <div class="mdl-layout__tab-panel is-active" id="about">
 
         <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
           <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--blue-300 mdl-color-text--white">
@@ -513,17 +513,18 @@
         </section>
       </div>
 
-      <div class="mdl-layout__tab-panel portfolio-panel is-active" id="portfolio">
+      <div class="mdl-layout__tab-panel portfolio-panel" id="portfolio">
         <section class="mdl-grid">
           <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-            <div class="mdl-card mdl-cell--12-col mdl-shadow--2dp">
+            <div class="mdl-card mdl-shadow--2dp">
               <div class="mdl-card__media" id="onamis">
               </div>
               <div class="mdl-card__title">
                 <h1 class="mdl-card__title-text">Onamis Web App</h1>
               </div>
               <div class="mdl-card__supporting-text hidden-text">
-                <p>Progressive Web App for a startup in France.</p>
+                <p>Progressive Web App for a startup in France. Full-stack development using Heroku SaaS Plaftorm. Using technologies
+                  such as Service Workers, MongoDB, Angular, Express and NodeJS.</p>
               </div>
               <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect button--read-more">Read more</a>
@@ -534,14 +535,15 @@
           </div>
 
           <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-            <div class="mdl-card mdl-cell--12-col mdl-shadow--2dp">
+            <div class="mdl-card mdl-shadow--2dp">
               <div class="mdl-card__media" id="myorobotics">
               </div>
               <div class="mdl-card__title">
                 <h1 class="mdl-card__title-text">MYORobotics</h1>
               </div>
               <div class="mdl-card__supporting-text hidden-text">
-                <p>Development of 3D printed musculoskeletal robots</p>
+                <p>Development and design of 3D printed structures for musculoskeletal robots based on optimal biological principles
+                  such as Biomimetics, Tensile Triangles and Topology Optimization.</p>
               </div>
               <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect button--read-more">Read more</a>
@@ -552,14 +554,15 @@
           </div>
 
           <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-            <div class="mdl-card mdl-cell--12-col mdl-shadow--2dp">
+            <div class="mdl-card mdl-shadow--2dp">
               <div class="mdl-card__media" id="mysoft">
               </div>
               <div class="mdl-card__title">
                 <h1 class="mdl-card__title-text">Mysoft Portal</h1>
               </div>
               <div class="mdl-card__supporting-text hidden-text">
-                <p>Company landing page</p>
+                <p>Company portal for Mysoft. Frontend development including logos, configuration of server and installation
+                  of RespondCMS. Personalization using Bootstrap and GIMP.</p>
               </div>
               <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect button--read-more">Read more</a>
@@ -570,14 +573,17 @@
           </div>
 
           <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-            <div class="mdl-card mdl-cell--12-col mdl-shadow--2dp">
+            <div class="mdl-card mdl-shadow--2dp">
               <div class="mdl-card__media" id="vivero">
               </div>
               <div class="mdl-card__title">
                 <h1 class="mdl-card__title-text">Vivero el Jardin</h1>
               </div>
               <div class="mdl-card__supporting-text hidden-text">
-                <p>e-Commerce portal</p>
+                <p>Vivero el Jardín is my own e-commerce portal based on the OpenCart platform. The start-up is pioneer in Mexico
+                  for selling plants online. I did the full implementation (i.e., Frontend, design, SEO optimization, server
+                  configuration)
+                </p>
               </div>
               <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect button--read-more">Read more</a>
@@ -588,14 +594,15 @@
           </div>
 
           <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-            <div class="mdl-card mdl-cell--12-col mdl-shadow--2dp">
+            <div class="mdl-card mdl-shadow--2dp">
               <div class="mdl-card__media" id="seneka">
               </div>
               <div class="mdl-card__title">
                 <h1 class="mdl-card__title-text">Seneka</h1>
               </div>
               <div class="mdl-card__supporting-text hidden-text">
-                <p>Mechanical design of elements for rescue robots</p>
+                <p>Responsible of developing and manufacturing an actuated base for a LiDAR system. The radar is part of a dynamic
+                  network of reconnaissance robots for search and rescue operations.</p>
               </div>
               <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect button--read-more">Read more</a>
@@ -607,14 +614,15 @@
           </div>
 
           <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-            <div class="mdl-card mdl-cell--12-col mdl-shadow--2dp">
+            <div class="mdl-card mdl-shadow--2dp">
               <div class="mdl-card__media" id="robohand">
               </div>
               <div class="mdl-card__title">
                 <h1 class="mdl-card__title-text">Robotic Hand</h1>
               </div>
               <div class="mdl-card__supporting-text hidden-text">
-                <p>Robotic hand prosthesis prototype</p>
+                <p>Robotic hand prosthesis prototype. Development of a low cost robotic hand controlled with myo-electric signals
+                  taken from the arm.</p>
               </div>
               <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect button--read-more">Read more</a>
@@ -625,14 +633,15 @@
           </div>
 
           <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-            <div class="mdl-card mdl-cell--12-col mdl-shadow--2dp">
+            <div class="mdl-card mdl-shadow--2dp">
               <div class="mdl-card__media" id="val">
               </div>
               <div class="mdl-card__title">
                 <h1 class="mdl-card__title-text">VAL Parser</h1>
               </div>
               <div class="mdl-card__supporting-text hidden-text">
-                <p>Programming IDE for VAL Robotic Programming Language</p>
+                <p>Design and implementation of user interface (UI) for a VAL robot programming parser. My main task was to
+                  develop a GUI focused on usability and user experience. The software is currently used in robotic labs.</p>
               </div>
               <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect button--read-more">Read more</a>
@@ -662,6 +671,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <!-- build:js scripts/main.min.js -->
   <script src="scripts/main.js"></script>
+  <script src="scripts/bug.js"></script>
   <!-- endbuild -->
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -672,6 +682,10 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-XXXXX-X', 'auto');
       ga('send', 'pageview');
+
+      function play() {
+        new BugController();
+      }
     </script>
   <!-- Built with love using Web Starter Kit -->
 </body>
