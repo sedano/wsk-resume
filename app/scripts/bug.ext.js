@@ -35,14 +35,14 @@ var BugDispatch = {
     options: {
         minDelay: 500,
         maxDelay: 10000,
-        minBugs: 2,
-        maxBugs: 20,
+        minBugs: 1,
+        maxBugs: 1,
         minSpeed: 5,
         maxSpeed: 10,
         maxLargeTurnDeg: 150,
         maxSmallTurnDeg: 10,
         maxWiggleDeg: 5,
-        imageSprite: 'fly-sprite.png',
+        imageSprite: 'images/fly-sprite.png',
         bugWidth: 13,
         bugHeight: 14,
         num_frames: 5,
@@ -53,7 +53,7 @@ var BugDispatch = {
         monitorMouseMovement: false,
         eventDistanceToBug: 40,
         minTimeBetweenMultipy: 1000,
-        mouseOver: 'random' // can be 'fly', 'flyoff' (if the bug can fly), die', 'multiply', 'nothing' or 'random'
+        mouseOver: 'die' // can be 'fly', 'flyoff' (if the bug can fly), die', 'multiply', 'nothing' or 'random'
     },
 
     initialize: function(options) {
