@@ -18,7 +18,7 @@
  */
 /* eslint-env browser */
 /* eslint linebreak-style: [1, "windows"] */
-(function () {
+(function() {
   'use strict';
 
   // Check to make sure service workers are supported in the current browser,
@@ -37,9 +37,9 @@
   if ('serviceWorker' in navigator &&
     (window.location.protocol === 'https:' || isLocalhost)) {
     navigator.serviceWorker.register('service-worker.js')
-      .then(function (registration) {
+      .then(function(registration) {
         // updatefound is fired if service-worker.js changes.
-        registration.onupdatefound = function () {
+        registration.onupdatefound = function() {
           // updatefound is also fired the very first time the SW is installed,
           // and there's no need to prompt for a reload at that point.
           // So check here to see if the page is already controlled,
@@ -49,7 +49,7 @@
             // https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#service-worker-container-updatefound-event
             var installingWorker = registration.installing;
 
-            installingWorker.onstatechange = function () {
+            installingWorker.onstatechange = function() {
               switch (installingWorker.state) {
                 case 'installed':
                   // At this point, the old content will have been purged and the
@@ -68,29 +68,32 @@
             };
           }
         };
-      }).catch(function (e) {
+      }).catch(function(e) {
         console.error('Error during service worker registration:', e);
       });
   }
 
   // Your custom JavaScript goes here
   /* eslint-env jquery */
-  $('.button--read-more').click(function () {
+  $('.button--read-more').click(function() {
     $(this).text($(this).text() === 'Read more' ? 'Hide' : 'Read more');
     $(this).closest('.mdl-card').find('.hidden-text').toggle('fast');
   });
-  document.querySelector('#spanish-bar').addEventListener('mdl-componentupgraded', function () {
-    this.MaterialProgress.setProgress(100);
-  });
-  document.querySelector('#english-bar').addEventListener('mdl-componentupgraded', function () {
-    this.MaterialProgress.setProgress(99);
-  });
-  document.querySelector('#polish-bar').addEventListener('mdl-componentupgraded', function () {
-    this.MaterialProgress.setProgress(55);
-    this.MaterialProgress.setBuffer(60);
-  });
-  document.querySelector('#german-bar').addEventListener('mdl-componentupgraded', function () {
-    this.MaterialProgress.setProgress(30);
-  });
-
+  document.querySelector('#spanish-bar')
+    .addEventListener('mdl-componentupgraded', function() {
+      this.MaterialProgress.setProgress(100);
+    });
+  document.querySelector('#english-bar')
+    .addEventListener('mdl-componentupgraded', function() {
+      this.MaterialProgress.setProgress(99);
+    });
+  document.querySelector('#polish-bar')
+    .addEventListener('mdl-componentupgraded', function() {
+      this.MaterialProgress.setProgress(55);
+      this.MaterialProgress.setBuffer(60);
+    });
+  document.querySelector('#german-bar')
+    .addEventListener('mdl-componentupgraded', function() {
+      this.MaterialProgress.setProgress(30);
+    });
 })();

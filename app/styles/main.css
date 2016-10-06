@@ -429,3 +429,60 @@ html, body {
   background-image: none;
   background-color: #FFE0B2;
 }
+
+.portfolio-panel .mdl-card__actions {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.portfolio-panel .mdl-card__actions > .mdl-button--icon {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.portfolio-panel .mdl-card__media > img {
+  max-width: 100%;
+}
+
+.portfolio-panel .mdl-card__media#onamis {
+  height: 300px;
+  box-shadow: inset 0 0 50px lightgray;
+  background: url('/images/onamis-banner.png') center / cover;
+}
+
+.portfolio-panel .mdl-card__media#mysoft {
+  height: 300px;
+  background: url('/images/mysoft-banner.png') left top / cover;
+}
+
+.portfolio-panel .mdl-card__media#vivero {
+  height: 300px;
+  background: url('/images/vivero-banner.jpg') left top / cover;
+}
+
+.portfolio-panel .mdl-card__media#myorobotics {
+  height: 300px;
+  background: url('/images/myorobotics-banner.jpg') 30% center / cover;
+}
+
+.portfolio-panel .mdl-card__media#seneka {
+  height: 300px;
+  background: url('/images/seneka-banner.jpg') center / cover;
+}
+
+.portfolio-panel .mdl-card__media#robohand {
+  height: 300px;
+  box-shadow: inset 0 0 100px lightgray;
+  background: url('/images/robohand-banner.jpg') center / cover;
+}
+
+.portfolio-panel .mdl-card__media#val {
+  height: 300px;
+  background: url('/images/val-banner.jpg') center / cover;
+}
+
+.portfolio-panel .mdl-card__supporting-text.hidden-text {
+  margin-top:0;
+  margin-bottom: 0;
+}
