@@ -38,7 +38,7 @@ var BugDispatch = {
     minDelay: 500,
     maxDelay: 10000,
     minBugs: 2,
-    maxBugs: 5,
+    maxBugs: 2,
     minSpeed: 5,
     maxSpeed: 10,
     maxLargeTurnDeg: 150,
@@ -48,14 +48,14 @@ var BugDispatch = {
     bugWidth: 13,
     bugHeight: 14,
     num_frames: 5,
-    zoom: 9, // random zoom variation from 1 to 10 - 10 being full size.
+    zoom: 10, // random zoom variation from 1 to 10 - 10 being full size.
     canFly: true,
     canDie: true,
     numDeathTypes: 3,
     monitorMouseMovement: false,
     eventDistanceToBug: 40,
     minTimeBetweenMultipy: 1000,
-    mouseOver: 'flyoff' // can be 'fly', 'flyoff' (if the bug can fly), die', 'multiply', 'nothing' or 'random'
+    mouseOver: 'random' // can be 'fly', 'flyoff' (if the bug can fly), die', 'multiply', 'nothing' or 'random'
   },
 
   initialize: function (options) {
@@ -336,29 +336,6 @@ var BugController = function () {
   this.initialize.apply(this, arguments);
 }
 BugController.prototype = BugDispatch;
-
-var SpiderController = function () {
-  var spiderOptions = {
-    imageSprite: 'spider-sprite.png',
-    bugWidth: 69,
-    bugHeight: 90,
-    num_frames: 7,
-    canFly: false,
-    canDie: true,
-    numDeathTypes: 2,
-    zoom: 6,
-    minDelay: 200,
-    maxDelay: 3000,
-    minSpeed: 6,
-    maxSpeed: 13,
-    minBugs: 3,
-    maxBugs: 10
-  };
-  this.options = mergeOptions(this.options, spiderOptions);
-  this.initialize.apply(this, arguments);
-
-}
-SpiderController.prototype = BugDispatch;
 
 /***************/
 /**    Bug    **/

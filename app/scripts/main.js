@@ -96,4 +96,7 @@
     .addEventListener('mdl-componentupgraded', function() {
       this.MaterialProgress.setProgress(30);
     });
+
+  setTimeout("$('#add').removeClass('hidden')", 30000);
+
 })();
