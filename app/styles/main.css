@@ -1,4 +1,4 @@
-/**
+  /**
  * Copyright 2015 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,510 +15,519 @@
  */
 
 
-/*
+  /*
 Note: any .css or .scss files included in the 'styles' directory
 will be correctly compiled during `gulp serve` and `gulp`
  */
-
-html, body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-
-/* Rules for sizing the icon. */
-
-.material-icons.md-18 {
-  font-size: 18px;
-}
-
-.material-icons.md-24 {
-  font-size: 24px;
-}
-
-.material-icons.md-36 {
-  font-size: 36px;
-}
-
-.material-icons.md-48 {
-  font-size: 48px;
-}
-
-
-/* Rules for using icons as black on a light background. */
-
-.material-icons.md-dark {
-  color: rgba(0, 0, 0, 0.54);
-}
-
-.material-icons.md-dark.md-inactive {
-  color: rgba(0, 0, 0, 0.26);
-}
-
-
-/* Rules for using icons as white on a dark background. */
-
-.material-icons.md-light {
-  color: rgba(255, 255, 255, 1);
-}
-
-.material-icons.md-light.md-inactive {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.material-icons.md-colored {
-  color: rgba(253, 216, 53, 1);
-}
-
-.mdl-demo .mdl-layout__header-row {
-  padding-left: 40px;
-}
-
-@media (max-width: 479px) {
-  .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
-    font-size: 1.4em;
+  
+  html, body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
     margin: 0;
-    width: 100%;
-    text-align: center;
+    padding: 0;
   }
-  .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row {
-    height: 3em;
+
+
+  /* Rules for sizing the icon. */
+  
+  .material-icons.md-18 {
+    font-size: 18px;
   }
-  .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar-container {
-    height: 2.5em;
+  
+  .material-icons.md-24 {
+    font-size: 24px;
   }
-  .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab {
+  
+  .material-icons.md-36 {
+    font-size: 36px;
+  }
+  
+  .material-icons.md-48 {
+    font-size: 48px;
+  }
+
+
+  /* Rules for using icons as black on a light background. */
+  
+  .material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  
+  .material-icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+  }
+
+
+  /* Rules for using icons as white on a dark background. */
+  
+  .material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .material-icons.md-colored {
+    color: rgba(253, 216, 53, 1);
+  }
+  
+  .mdl-demo .mdl-layout__header-row {
+    padding-left: 40px;
+  }
+  
+  @media (max-width: 759px) and (orientation: landscape) {
+    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row {
+      display:none
+    }
+    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header{
+      min-height: 40px;
+    }
+  }
+  
+  @media (max-width: 759px) {
+    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
+      font-size: 1.4em;
+      margin: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row {
+      height: 3em;
+    }
+    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar-container {
+      height: 3em;
+    }
+    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab {
+      height: 100%;
+      line-height: 3;
+      font-size: 0.9em;
+    }
+    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-panel {
+      padding-top: 16px;
+    }
+  }
+  
+  .mdl-demo .mdl-layout__tab-bar-button {
+    display: none;
+  }
+  
+  .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {
+    display: none;
+  }
+  
+  .mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar, .mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {
+    overflow: visible;
+  }
+  
+  .mdl-demo .mdl-layout__tab-bar-container {
+    height: 64px;
+  }
+  
+  .mdl-demo .mdl-layout__tab-bar {
+    padding: 0;
+    padding-left: 16px;
+    box-sizing: border-box;
     height: 100%;
-    line-height: 2.5;
-    font-size: 0.9em;
+    width: 100%;
   }
-  .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-panel {
-    padding-top: 16px;
+  
+  .mdl-demo .mdl-layout__tab-bar .mdl-layout__tab {
+    height: 64px;
+    line-height: 64px;
   }
-}
+  
+  .mdl-demo .mdl-layout__tab-bar .mdl-layout__tab.is-active::after {
+    background-color: white;
+    height: 4px;
+  }
+  
+  .mdl-demo main > .mdl-layout__tab-panel {
+    padding: 8px;
+    padding-top: 48px;
+  }
+  
+  .mdl-demo .mdl-card {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mdl-demo .mdl-card > * {
+    height: auto;
+  }
+  
+  .mdl-demo .mdl-card .mdl-card__supporting-text {
+    margin: 40px;
+    flex-grow: 1;
+    padding: 0;
+    color: inherit;
+    width: calc(100% - 80px);
+  }
+  
+  .mdl-demo .mdl-card .mdl-card__title-text {
+    font-size: 1.3em;
+  }
+  
+  .mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .mdl-demo .mdl-card__actions {
+    margin: 0;
+    text-align: right;
+    color: inherit;
+  }
+  
+  .mdl-demo .mdl-card__actions a {
+    color: #455A64;
+    margin: 0;
+  }
+  
+  .mdl-demo .mdl-card__actions a:hover, .mdl-demo .mdl-card__actions a:active {
+    color: inherit;
+    background-color: transparent;
+  }
+  
+  .mdl-demo .mdl-card__supporting-text + .mdl-card__actions {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  
+  .mdl-demo #add {
+    position: absolute;
+    right: 40px;
+    top: 36px;
+    z-index: 999;
+  }
+  
+  .mdl-demo .mdl-layout__content section {
+    position: relative;
+    margin-bottom: 48px;
+  }
+  
+  .mdl-demo section.section--center {
+    max-width: 860px;
+  }
+  
+  .mdl-demo .education-panel section.section--center {
+    max-width: 992px;
+  }
+  
+  .mdl-demo section > header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mdl-demo section > .section__play-btn {
+    min-height: 200px;
+  }
+  
+  .mdl-demo section > header > .material-icons {
+    font-size: 7rem;
+  }
+  
+  .mdl-demo section > button {
+    position: absolute;
+    z-index: 99;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .mdl-demo section .section__circle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 0;
+    flex-shrink: 1;
+  }
+  
+  .mdl-demo section .section__text {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding-top: 8px;
+  }
+  
+  .mdl-demo section .section__text h5 {
+    font-size: inherit;
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
+  
+  .mdl-demo section .section__text a {
+    text-decoration: none;
+  }
+  
+  .mdl-demo a {
+    text-decoration: none;
+    font-weight: normal;
+    color: inherit;
+  }
+  
+  .mdl-demo section .section__circle-container > .section__circle-container__circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    margin: 8px 0;
+  }
+  
+  .mdl-demo section.section--footer .section__circle--big {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 8px 32px;
+  }
+  
+  .mdl-demo section.section--footer {
+    padding: 64px 0;
+    margin: 0 -8px -8px -8px;
+  }
 
-.mdl-demo .mdl-layout__tab-bar-button {
-  display: none;
-}
-
-.mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {
-  display: none;
-}
-
-.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar, .mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {
-  overflow: visible;
-}
-
-.mdl-demo .mdl-layout__tab-bar-container {
-  height: 64px;
-}
-
-.mdl-demo .mdl-layout__tab-bar {
-  padding: 0;
-  padding-left: 16px;
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-}
-
-.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab {
-  height: 64px;
-  line-height: 64px;
-}
-
-.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab.is-active::after {
-  background-color: white;
-  height: 4px;
-}
-
-.mdl-demo main > .mdl-layout__tab-panel {
-  padding: 8px;
-  padding-top: 48px;
-}
-
-.mdl-demo .mdl-card {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.mdl-demo .mdl-card > * {
-  height: auto;
-}
-
-.mdl-demo .mdl-card .mdl-card__supporting-text {
-  margin: 40px;
-  flex-grow: 1;
-  padding: 0;
-  color: inherit;
-  width: calc(100% - 80px);
-}
-
-.mdl-demo .mdl-card .mdl-card__title-text {
-  font-size: 1.3em;
-}
-
-.mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.mdl-demo .mdl-card__actions {
-  margin: 0;
-  text-align: right;
-  color: inherit;
-}
-
-.mdl-demo .mdl-card__actions a {
-  color: #455A64;
-  margin: 0;
-}
-
-.mdl-demo .mdl-card__actions a:hover, .mdl-demo .mdl-card__actions a:active {
-  color: inherit;
-  background-color: transparent;
-}
-
-.mdl-demo .mdl-card__supporting-text + .mdl-card__actions {
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
-}
-
-.mdl-demo #add {
-  position: absolute;
-  right: 40px;
-  top: 36px;
-  z-index: 999;
-}
-
-.mdl-demo .mdl-layout__content section {
-  position: relative;
-  margin-bottom: 48px;
-}
-
-.mdl-demo section.section--center {
-  max-width: 860px;
-}
-
-.mdl-demo .education-panel section.section--center {
-  max-width: 992px;
-}
-
-.mdl-demo section > header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mdl-demo section > .section__play-btn {
-  min-height: 200px;
-}
-
-.mdl-demo section > header > .material-icons {
-  font-size: 7rem;
-}
-
-.mdl-demo section > button {
-  position: absolute;
-  z-index: 99;
-  top: 8px;
-  right: 8px;
-}
-
-.mdl-demo section .section__circle {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-grow: 0;
-  flex-shrink: 1;
-}
-
-.mdl-demo section .section__text {
-  flex-grow: 1;
-  flex-shrink: 0;
-  padding-top: 8px;
-}
-
-.mdl-demo section .section__text h5 {
-  font-size: inherit;
-  margin: 0;
-  margin-bottom: 0.5em;
-}
-
-.mdl-demo section .section__text a {
-  text-decoration: none;
-}
-
-.mdl-demo a {
-  text-decoration: none;
-  font-weight: normal;
-  color: inherit;
-}
-
-.mdl-demo section .section__circle-container > .section__circle-container__circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 32px;
-  margin: 8px 0;
-}
-
-.mdl-demo section.section--footer .section__circle--big {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  margin: 8px 32px;
-}
-
-.mdl-demo section.section--footer {
-  padding: 64px 0;
-  margin: 0 -8px -8px -8px;
-}
-
-
-/*.mdl-demo section.section--center .section__text:not(:last-child) {
+  
+  /*.mdl-demo section.section--center .section__text:not(:last-child) {
   padding-bottom: 1em;
   border-bottom: 1px solid rgba(0, 0, 0, .13);
 }*/
-
-.mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {
-  margin-bottom: 24px;
-}
-
-.mdl-demo #features section {
-  margin-bottom: 72px;
-}
-
-.mdl-demo #features h4, #features h5 {
-  margin-bottom: 16px;
-}
-
-.mdl-demo .toc {
-  border-left: 4px solid #C1EEF4;
-  margin: 24px;
-  padding: 0;
-  padding-left: 8px;
-  display: flex;
-  flex-direction: column;
-}
-
-.mdl-demo .toc h4 {
-  font-size: 0.9rem;
-  margin-top: 0;
-}
-
-.mdl-demo .toc a {
-  color: #4DD0E1;
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 28px;
-  display: block;
-}
-
-.mdl-demo .mdl-menu__container {
-  z-index: 99;
-}
-
-.mdl-demo .section__icon .material-icons {
-  font-size: 36px;
-  padding-top: 0.1em;
-}
-
-.mdl-demo a.blur {
-  filter: blur(3px)
-}
-
-.mdl-demo a.blur:hover {
-  filter: none;
-}
-
-.mdl-demo .mdl-layout__header-row {
-  height: 96px;
-}
-
-.mdl-demo .hidden-text {
-  display: none;
-}
-
-.mdl-demo .work-panel .mdl-chip {
-  font-size: 1em;
-  height: 24px;
-  line-height: 24px;
-  padding: 0 6px;
-}
-
-.mdl-demo .work-panel .mdl-chip .mdl-chip__text {
-  font-size: 0.8em;
-}
-
-.mdl-demo .work-panel .mdl-card__title {
-  height: 60px;
-  padding-top: 24px;
-}
-
-.mdl-demo .work-panel .mdl-card__title img {
-  height: 100%;
-  padding-left: calc(40px - 16px);
-}
-
-.mdl-demo .work-panel .mdl-card__supporting-text .work-dates {
-  font-weight: 500;
-  margin-top: -0.7em;
-  margin-bottom: 1em;
-}
-
-.mdl-demo .work-panel .mdl-card__supporting-text {
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-
-.mdl-demo .work-panel .mdl-card__supporting-text>h5 {
-  margin-top: 0.7em;
-}
-
-.mdl-demo .work-panel .mdl-card__supporting-text ul {
-  margin-top: 0;
-}
-
-.mdl-demo .education-panel .mdl-card__supporting-text {
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
-.mdl-demo .education-panel .education-dates {
-  margin-bottom: 1.3em;
-}
-
-.mdl-demo .education-panel a>.material-icons {
-  vertical-align: text-bottom;
-}
-
-.mdl-demo .education-panel .mdl-card__actions {
-  margin-bottom: 0.4em;
-}
-
-.mdl-demo .education-panel .mdl-card__supporting-text h6 {
-  margin-top: 0.7em;
-  line-height: 1em;
-  margin-bottom: 0.5em;
-}
-
-.mdl-demo .education-panel university-section .mdl-card__supporting-text h5 {
-  margin-bottom: 0;
-}
-
-.mdl-demo university-section .mdl-card:last-child {
-  min-height: 50px;
-}
-
-.mdl-demo .education-panel .mdl-card {
-  min-height: 100px;
-}
-
-.mdl-demo .education-panel .mdl-card__actions {
-  text-align: left;
-  margin-left: 32px;
-  margin-right: 32px;
-  width: calc(100% - 64px);
-}
-
-.mdl-demo .education-panel #german-bar {
-  margin-bottom: 40px;
-}
-
-.mdl-demo .mdl-progress.progress-color--green>.progressbar {
-  background-color: #4CAF50;
-}
-
-.mdl-demo .mdl-progress.progress-color--green>.bufferbar {
-  background-image: none;
-  background-color: #C8E6C9;
-}
-
-.mdl-demo .mdl-progress.progress-color--lime>.progressbar {
-  background-color: #CDDC39;
-}
-
-.mdl-demo .mdl-progress.progress-color--lime>.bufferbar {
-  background-image: none;
-  background-color: #F0F4C3;
-}
-
-.mdl-demo .mdl-progress.progress-color--lime>.auxbar {
-  background-image: none;
-  background-color: #E6EE9C;
-}
-
-.mdl-demo .mdl-progress.progress-color--orange>.progressbar {
-  background-color: #FF9800;
-}
-
-.mdl-demo .mdl-progress.progress-color--orange>.bufferbar {
-  background-image: none;
-  background-color: #FFE0B2;
-}
-
-.portfolio-panel .mdl-card {
-  width: 100%;
-}
-
-.portfolio-panel .mdl-card__actions {
-  display: flex;
-  box-sizing: border-box;
-  align-items: center;
-}
-
-.portfolio-panel .mdl-card__actions > .mdl-button--icon {
-  margin-right: 3px;
-  margin-left: 3px;
-}
-
-.portfolio-panel .mdl-card__media > img {
-  max-width: 100%;
-}
-
-.portfolio-panel .mdl-card__media#onamis {
-  height: 300px;
-  box-shadow: inset 0 0 50px lightgray;
-  background: url('/images/onamis-banner.png') center / cover;
-}
-
-.portfolio-panel .mdl-card__media#mysoft {
-  height: 300px;
-  background: url('/images/mysoft-banner.png') left top / cover;
-}
-
-.portfolio-panel .mdl-card__media#vivero {
-  height: 300px;
-  background: url('/images/vivero-banner.jpg') left top / cover;
-}
-
-.portfolio-panel .mdl-card__media#myorobotics {
-  height: 300px;
-  background: url('/images/myorobotics-banner.jpg') 30% center / cover;
-}
-
-.portfolio-panel .mdl-card__media#seneka {
-  height: 300px;
-  background: url('/images/seneka-banner.jpg') center / cover;
-}
-
-.portfolio-panel .mdl-card__media#robohand {
-  height: 300px;
-  box-shadow: inset 0 0 100px lightgray;
-  background: url('/images/robohand-banner.jpg') center / cover;
-}
-
-.portfolio-panel .mdl-card__media#val {
-  height: 300px;
-  background: url('/images/val-banner.jpg') center / cover;
-}
-
-.portfolio-panel .mdl-card__supporting-text.hidden-text {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.portfolio-panel .mdl-card__title h1.mdl-card__title-text {
-  text-align: center;
-  font-weight: 700;
-}
+  
+  .mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {
+    margin-bottom: 24px;
+  }
+  
+  .mdl-demo #features section {
+    margin-bottom: 72px;
+  }
+  
+  .mdl-demo #features h4, #features h5 {
+    margin-bottom: 16px;
+  }
+  
+  .mdl-demo .toc {
+    border-left: 4px solid #C1EEF4;
+    margin: 24px;
+    padding: 0;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mdl-demo .toc h4 {
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+  
+  .mdl-demo .toc a {
+    color: #4DD0E1;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 28px;
+    display: block;
+  }
+  
+  .mdl-demo .mdl-menu__container {
+    z-index: 99;
+  }
+  
+  .mdl-demo .section__icon .material-icons {
+    font-size: 36px;
+    padding-top: 0.1em;
+  }
+  
+  .mdl-demo a.blur {
+    filter: blur(3px)
+  }
+  
+  .mdl-demo a.blur:hover {
+    filter: none;
+  }
+  
+  .mdl-demo .mdl-layout__header-row {
+    height: 96px;
+  }
+  
+  .mdl-demo .hidden-text {
+    display: none;
+  }
+  
+  .mdl-demo .work-panel .mdl-chip {
+    font-size: 1em;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 6px;
+  }
+  
+  .mdl-demo .work-panel .mdl-chip .mdl-chip__text {
+    font-size: 0.8em;
+  }
+  
+  .mdl-demo .work-panel .mdl-card__title {
+    height: 60px;
+    padding-top: 24px;
+  }
+  
+  .mdl-demo .work-panel .mdl-card__title img {
+    height: 100%;
+    padding-left: calc(40px - 16px);
+  }
+  
+  .mdl-demo .work-panel .mdl-card__supporting-text .work-dates {
+    font-weight: 500;
+    margin-top: -0.7em;
+    margin-bottom: 1em;
+  }
+  
+  .mdl-demo .work-panel .mdl-card__supporting-text {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  
+  .mdl-demo .work-panel .mdl-card__supporting-text>h5 {
+    margin-top: 0.7em;
+  }
+  
+  .mdl-demo .work-panel .mdl-card__supporting-text ul {
+    margin-top: 0;
+  }
+  
+  .mdl-demo .education-panel .mdl-card__supporting-text {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  
+  .mdl-demo .education-panel .education-dates {
+    margin-bottom: 1.3em;
+  }
+  
+  .mdl-demo .education-panel a>.material-icons {
+    vertical-align: text-bottom;
+  }
+  
+  .mdl-demo .education-panel .mdl-card__actions {
+    margin-bottom: 0.4em;
+  }
+  
+  .mdl-demo .education-panel .mdl-card__supporting-text h6 {
+    margin-top: 0.7em;
+    line-height: 1em;
+    margin-bottom: 0.5em;
+  }
+  
+  .mdl-demo .education-panel university-section .mdl-card__supporting-text h5 {
+    margin-bottom: 0;
+  }
+  
+  .mdl-demo university-section .mdl-card:last-child {
+    min-height: 50px;
+  }
+  
+  .mdl-demo .education-panel .mdl-card {
+    min-height: 100px;
+  }
+  
+  .mdl-demo .education-panel .mdl-card__actions {
+    text-align: left;
+    margin-left: 32px;
+    margin-right: 32px;
+    width: calc(100% - 64px);
+  }
+  
+  .mdl-demo .education-panel #german-bar {
+    margin-bottom: 40px;
+  }
+  
+  .mdl-demo .mdl-progress.progress-color--green>.progressbar {
+    background-color: #4CAF50;
+  }
+  
+  .mdl-demo .mdl-progress.progress-color--green>.bufferbar {
+    background-image: none;
+    background-color: #C8E6C9;
+  }
+  
+  .mdl-demo .mdl-progress.progress-color--lime>.progressbar {
+    background-color: #CDDC39;
+  }
+  
+  .mdl-demo .mdl-progress.progress-color--lime>.bufferbar {
+    background-image: none;
+    background-color: #F0F4C3;
+  }
+  
+  .mdl-demo .mdl-progress.progress-color--lime>.auxbar {
+    background-image: none;
+    background-color: #E6EE9C;
+  }
+  
+  .mdl-demo .mdl-progress.progress-color--orange>.progressbar {
+    background-color: #FF9800;
+  }
+  
+  .mdl-demo .mdl-progress.progress-color--orange>.bufferbar {
+    background-image: none;
+    background-color: #FFE0B2;
+  }
+  
+  .portfolio-panel .mdl-card {
+    width: 100%;
+  }
+  
+  .portfolio-panel .mdl-card__actions {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  
+  .portfolio-panel .mdl-card__actions > .mdl-button--icon {
+    margin-right: 3px;
+    margin-left: 3px;
+  }
+  
+  .portfolio-panel .mdl-card__media > img {
+    max-width: 100%;
+  }
+  
+  .portfolio-panel .mdl-card__media#onamis {
+    height: 300px;
+    box-shadow: inset 0 0 50px lightgray;
+    background: url('/images/onamis-banner.png') center / cover;
+  }
+  
+  .portfolio-panel .mdl-card__media#mysoft {
+    height: 300px;
+    background: url('/images/mysoft-banner.png') left top / cover;
+  }
+  
+  .portfolio-panel .mdl-card__media#vivero {
+    height: 300px;
+    background: url('/images/vivero-banner.jpg') left top / cover;
+  }
+  
+  .portfolio-panel .mdl-card__media#myorobotics {
+    height: 300px;
+    background: url('/images/myorobotics-banner.jpg') 30% center / cover;
+  }
+  
+  .portfolio-panel .mdl-card__media#seneka {
+    height: 300px;
+    background: url('/images/seneka-banner.jpg') center / cover;
+  }
+  
+  .portfolio-panel .mdl-card__media#robohand {
+    height: 300px;
+    box-shadow: inset 0 0 100px lightgray;
+    background: url('/images/robohand-banner.jpg') center / cover;
+  }
+  
+  .portfolio-panel .mdl-card__media#val {
+    height: 300px;
+    background: url('/images/val-banner.jpg') center / cover;
+  }
+  
+  .portfolio-panel .mdl-card__supporting-text.hidden-text {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .portfolio-panel .mdl-card__title h1.mdl-card__title-text {
+    text-align: center;
+    font-weight: 700;
+  }
