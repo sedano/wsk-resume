@@ -97,6 +97,16 @@
       this.MaterialProgress.setProgress(30);
     });
 
-  setTimeout("$('#add').removeClass('hidden')", 30000);
+  var showPlayButton = function() {
+    $('#add').removeClass('hidden');
+  };
 
+  setTimeout(showPlayButton, 30000);
+
+  $('.mdl-layout__content').on('swiperight', function() {
+    console.log('Swipe right detected!');
+  });
+  $('.mdl-layout__content').on('swipeleft', function() {
+    console.log('Swipe left detected!');
+  });
 })();
