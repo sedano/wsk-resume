@@ -75,8 +75,27 @@ html, body {
   padding-left: 40px;
 }
 
-.mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
-  font-size: inherit;
+@media (max-width: 479px) {
+  .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
+    font-size: 1.4em;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row {
+    height: 3em;
+  }
+  .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar-container {
+    height: 2.5em;
+  }
+  .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab {
+    height: 100%;
+    line-height: 2.5;
+    font-size: 0.9em;
+  }
+  .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-panel {
+    padding-top: 16px;
+  }
 }
 
 .mdl-demo .mdl-layout__tab-bar-button {
@@ -367,6 +386,14 @@ html, body {
 
 .mdl-demo .education-panel .education-dates {
   margin-bottom: 1.3em;
+}
+
+.mdl-demo .education-panel a>.material-icons {
+  vertical-align: text-bottom;
+}
+
+.mdl-demo .education-panel .mdl-card__actions {
+  margin-bottom: 0.4em;
 }
 
 .mdl-demo .education-panel .mdl-card__supporting-text h6 {
