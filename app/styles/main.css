@@ -78,10 +78,9 @@ will be correctly compiled during `gulp serve` and `gulp`
       height: 3em;
     }
     .mdl-demo .mdl-layout__tab-bar-container {
-      height: 36px !important;
+      height: 100% !important;
     }
     .mdl-demo .mdl-layout__header .mdl-layout__tab {
-      height: 100%;
       line-height: 3 !important;
       font-size: 0.9em !important;
       height: 3em !important;
