@@ -1,5 +1,5 @@
 {
-  "land": "en",
+  "lang": "en",
   "name": "Alejandro Sedano",
   "short_name": "sedano.me",
   "icons": [
@@ -19,7 +19,7 @@
       "type": "image/png"
     },
     {
-      "src": "images/touch/ms-touch-icon-144x144-precomposed.png",
+      "src": "images/touch/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
