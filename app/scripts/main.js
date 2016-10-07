@@ -103,7 +103,7 @@
 
   setTimeout(showPlayButton, 30000);
 
-  $(document).ready(function() {
+ /*  $(document).ready(function() {
     console.log('Document ready!');
     $('.mdl-layout__content').on('swiperight', function() {
       console.log('Swipe right detected!');
@@ -111,5 +111,5 @@
     $('.mdl-layout__content').on('swipeleft', function() {
       console.log('Swipe left detected!');
     });
-  });
+  }); */
 })();
