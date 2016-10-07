@@ -85,7 +85,7 @@ will be correctly compiled during `gulp serve` and `gulp`
       font-size: 0.9em !important;
       height: 3em !important;
     }
-    .mdl-demo .mdl-layout__header .mdl-layout__tab-panel {
+    .mdl-demo main>.mdl-layout__tab-panel {
       padding-top: 16px;
     }
   }
