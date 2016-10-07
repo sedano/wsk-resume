@@ -13,8 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-
   /*
 Note: any .css or .scss files included in the 'styles' directory
 will be correctly compiled during `gulp serve` and `gulp`
@@ -25,8 +23,6 @@ will be correctly compiled during `gulp serve` and `gulp`
     margin: 0;
     padding: 0;
   }
-
-
   /* Rules for sizing the icon. */
   
   .material-icons.md-18 {
@@ -44,8 +40,6 @@ will be correctly compiled during `gulp serve` and `gulp`
   .material-icons.md-48 {
     font-size: 48px;
   }
-
-
   /* Rules for using icons as black on a light background. */
   
   .material-icons.md-dark {
@@ -55,8 +49,6 @@ will be correctly compiled during `gulp serve` and `gulp`
   .material-icons.md-dark.md-inactive {
     color: rgba(0, 0, 0, 0.26);
   }
-
-
   /* Rules for using icons as white on a dark background. */
   
   .material-icons.md-light {
@@ -75,35 +67,36 @@ will be correctly compiled during `gulp serve` and `gulp`
     padding-left: 40px;
   }
   
-  @media (max-width: 759px) and (orientation: landscape) {
-    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row {
-      display:none
-    }
-    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header{
-      min-height: 40px;
-    }
-  }
-  
   @media (max-width: 759px) {
-    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
+    .mdl-demo .mdl-layout .mdl-layout__header-row h3 {
       font-size: 1.4em;
       margin: 0;
       width: 100%;
       text-align: center;
     }
-    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row {
+    .mdl-demo .mdl-layout .mdl-layout__header-row {
       height: 3em;
     }
-    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar-container {
-      height: 3em;
+    .mdl-demo .mdl-layout__tab-bar-container {
+      height: 36px !important;
     }
-    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab {
+    .mdl-demo .mdl-layout__header .mdl-layout__tab {
       height: 100%;
-      line-height: 3;
-      font-size: 0.9em;
+      line-height: 3 !important;
+      font-size: 0.9em !important;
+      height: 3em !important;
     }
-    .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-panel {
+    .mdl-demo .mdl-layout__header .mdl-layout__tab-panel {
       padding-top: 16px;
+    }
+  }
+  
+  @media (max-width: 759px) and (orientation: landscape) {
+    .mdl-demo .mdl-layout .mdl-layout__header-row {
+      display: none
+    }
+    .mdl-demo .mdl-layout .mdl-layout__header {
+      min-height: 36px;
     }
   }
   
@@ -282,8 +275,6 @@ will be correctly compiled during `gulp serve` and `gulp`
     padding: 64px 0;
     margin: 0 -8px -8px -8px;
   }
-
-  
   /*.mdl-demo section.section--center .section__text:not(:last-child) {
   padding-bottom: 1em;
   border-bottom: 1px solid rgba(0, 0, 0, .13);
