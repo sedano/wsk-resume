@@ -98,18 +98,36 @@
     });
 
   var showPlayButton = function() {
-    $('#add').removeClass('hidden');
+    $('#play').removeClass('hidden');
+  };
+
+  var hideName = function() {
+    $('#lejandro').animate({
+      width: '0',
+      opacity: '0',
+    }, 500);
+  };
+
+  var showName = function() {
+    $('#lejandro').animate({
+      width: '130',
+      opacity: '100',
+    }, 500, function() {
+      setTimeout(hideName, 1000);
+    });
   };
 
   setTimeout(showPlayButton, 30000);
 
- /*  $(document).ready(function() {
-    console.log('Document ready!');
-    $('.mdl-layout__content').on('swiperight', function() {
-      console.log('Swipe right detected!');
-    });
-    $('.mdl-layout__content').on('swipeleft', function() {
-      console.log('Swipe left detected!');
-    });
-  }); */
+  $('#buttonA').click(showName);
+
+  /*  $(document).ready(function() {
+     console.log('Document ready!');
+     $('.mdl-layout__content').on('swiperight', function() {
+       console.log('Swipe right detected!');
+     });
+     $('.mdl-layout__content').on('swipeleft', function() {
+       console.log('Swipe left detected!');
+     });
+   }); */
 })();

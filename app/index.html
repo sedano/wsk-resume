@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Personal website of Alejandro Sedano, a Robotics Engineer specialized in Biotechnology.">
-  <meta name="keywords" content="sedano, robotics, engineer, medical, devices, biomimetics, biotechnology, website, portfolio, resume, cv" />
+  <meta name="keywords" content="sedano, robotics, engineer, medical, devices, biomimetics, biotechnology, website, portfolio, resume, cv"
+  />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alejandro Sedano - Landing Page</title>
 
@@ -64,21 +65,21 @@
 </head>
 
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-      <div class="mdl-layout__header-row">
-        <h3>Alejandro Sedano</h3>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs mdl-layout--no-drawer-button">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row mdl-color--primary-dark mdl-layout--large-screen-only">
+        <img class="mdl-layout__icon" src="images/touch/icon-72x72.png" alt="A"></img>
+        <span class="mdl-layout__title">lejandro Sedano</span>
       </div>
-      <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-        <a href="#about" class="mdl-layout__tab is-active">About me</a>
-        <a href="#work" class="mdl-layout__tab">Experience</a>
-        <a href="#portfolio" class="mdl-layout__tab">Portfolio</a>
-        <a href="#education" class="mdl-layout__tab">Education</a>
-        <button onclick="play()" class="hidden mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent"
-          id="add">
-            <i class="material-icons" role="presentation">bug_report</i>
-            <span class="visuallyhidden">Play</span>
-          </button>
+      <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+        <div class="mdl-layout__header-row">
+          <img id="buttonA" class="mdl-layout__icon mdl-layout--small-screen-only" src="images/touch/icon-72x72.png" alt="A"></img>
+          <span id="lejandro" class="mdl-color--primary-dark mdl-shadow--6dp">lejandro Sedano</span>
+        </div>
+        <a href="#about" class="mdl-layout__tab is-active"><i class="material-icons md-28 mdl-layout--small-screen-only">face</i><span class="mdl-layout--large-screen-only">About me</span></a>
+        <a href="#work" class="mdl-layout__tab"><i class="material-icons md-28 mdl-layout--small-screen-only">work</i><span class="mdl-layout--large-screen-only">Experience</span></a>
+        <a href="#portfolio" class="mdl-layout__tab"><i class="material-icons md-28 mdl-layout--small-screen-only">import_contacts</i><span class="mdl-layout--large-screen-only">Portfolio</span></a>
+        <a href="#education" class="mdl-layout__tab"><i class="material-icons md-28 mdl-layout--small-screen-only">school</i><span class="mdl-layout--large-screen-only">Education</span></a>
       </div>
     </header>
     <main class="mdl-layout__content">
@@ -97,7 +98,8 @@
             </div>
             <div class="mdl-card__actions">
               <a href="mailto:alejandro@sedano.me" class="mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">mail</i></a>
-              <a href="https://pl.linkedin.com/in/sanchezsedano" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect"><img src="images/linkedin-box.png" alt="in"></i></a>
+              <a href="https://pl.linkedin.com/in/sanchezsedano" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect"><img src="images/linkedin-box.png" alt="in"></i>
+              </a>
               <a href="https://github.com/sedano" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect"><img src="images/github-circle.png" alt="github"></a>
             </div>
           </div>
@@ -115,7 +117,7 @@
               </div>
               <div class="section__text mdl-cell mdl-cell--5-col-desktop mdl-cell--7-col-tablet mdl-cell--3-col-phone">
                 <h5>Location</h5>
-                Warsaw, Poland
+                Europe
               </div>
 
               <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--1-col-tablet mdl-cell--1-col-phone">
@@ -661,7 +663,9 @@
         </section>
       </div>
 
-
+      <button onclick="play()" class="hidden mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--primary"
+        id="play"><i class="material-icons" role="presentation">bug_report</i><span class="visuallyhidden">Play</span>
+      </button>
 
       <footer class="mdl-mini-footer">
         <div class="mdl-mini-footer__right-section">
