@@ -98,7 +98,7 @@ will be correctly compiled during `gulp serve` and `gulp`
   
   .mdl-demo main > .mdl-layout__tab-panel {
     padding: 8px;
-    padding-top: 48px;
+    padding-top: 88px;
   }
   
   .mdl-demo .mdl-layout__tab-bar, .mdl-demo .mdl-layout__tab-bar-container {
@@ -113,10 +113,11 @@ will be correctly compiled during `gulp serve` and `gulp`
   
   .mdl-demo .mdl-layout__tab .material-icons {
     line-height: 1.5;
+    min-width: 48px;
   }
   
   .mdl-demo h1.mdl-typography--display-1 {
-    margin-top: -24px;
+    margin-top: -64px;
   }
   
   .mdl-demo .portfolio-panel h1.mdl-typography--display-1 {
