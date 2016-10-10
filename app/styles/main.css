@@ -115,6 +115,15 @@ will be correctly compiled during `gulp serve` and `gulp`
     line-height: 1.5;
   }
   
+  .mdl-demo h1.mdl-typography--display-1 {
+    margin-top: -24px;
+  }
+  
+  .mdl-demo .portfolio-panel h1.mdl-typography--display-1 {
+    margin-top: -8px;
+    margin-bottom: 0;
+  }
+  
   .mdl-demo .mdl-card {
     height: auto;
     display: flex;
@@ -137,7 +146,7 @@ will be correctly compiled during `gulp serve` and `gulp`
     font-size: 1.3em;
   }
   
-  .mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
+  .mdl-demo .mdl-card__supporting-text h4 {
     margin-top: 0;
     margin-bottom: 20px;
   }
@@ -161,13 +170,12 @@ will be correctly compiled during `gulp serve` and `gulp`
   .mdl-demo .mdl-card__supporting-text + .mdl-card__actions {
     border-top: 1px solid rgba(0, 0, 0, 0.12);
   }
-  
-  .mdl-demo #play {
+  /*.mdl-demo #play {
     position: absolute;
     right: 40px;
     bottom: 36px;
     z-index: 999;
-  }
+  }*/
   
   .mdl-demo .mdl-layout__content section {
     position: relative;
@@ -429,6 +437,10 @@ will be correctly compiled during `gulp serve` and `gulp`
     background-color: #FFE0B2;
   }
   
+  .mdl-demo #portfolio {
+    padding-top: 16px;
+  }
+  
   .portfolio-panel .mdl-card {
     width: 100%;
   }
@@ -493,4 +505,22 @@ will be correctly compiled during `gulp serve` and `gulp`
   .portfolio-panel .mdl-card__title h1.mdl-card__title-text {
     text-align: center;
     font-weight: 700;
+  }
+  /*.is-small-screen #play {
+    display: none;
+  }
+  
+  #play mdl-button--ripley-container {
+    position: absolute;
+    bottom: 48px;
+    right: 48px;
+  }*/
+  
+  .mdl-demo .mdl-mini-footer {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+  }
+  
+  .mdl-demo .mdl-mini-footer li {
+    line-height: 3
   }

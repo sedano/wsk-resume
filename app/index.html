@@ -85,7 +85,7 @@
     <main class="mdl-layout__content">
 
       <div class="mdl-layout__tab-panel is-active" id="about">
-
+        <h1 class="mdl-typography--display-1 mdl-layout--small-screen-only">About me</h1>
         <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
           <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--blue-300 mdl-color-text--white">
             <i class="material-icons">account_circle</i>
@@ -162,7 +162,7 @@
       </div>
 
       <div class="mdl-layout__tab-panel work-panel" id="work">
-
+        <h1 class="mdl-typography--display-1 mdl-layout--small-screen-only">Work experience</h1>
         <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
           <div class="mdl-card mdl-cell mdl-cell--12-col">
             <div class="mdl-card__title">
@@ -327,7 +327,7 @@
       </div>
 
       <div class="mdl-layout__tab-panel education-panel" id="education">
-
+        <h1 class="mdl-typography--display-1 mdl-layout--small-screen-only">Education</h1>
         <section class="section--center university-section mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
           <h4 class="mdl-cell mdl-cell--12-col">
             <div class="mdl-card__title mdl-color--blue mdl-color-text--white">Studies</div>
@@ -524,6 +524,9 @@
 
       <div class="mdl-layout__tab-panel portfolio-panel" id="portfolio">
         <section class="mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col">
+            <h1 class="mdl-typography--display-1 mdl-layout--small-screen-only">Portfolio</h1>
+          </div>
           <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
             <div class="mdl-card mdl-shadow--2dp">
               <div class="mdl-card__media" id="onamis">
@@ -663,15 +666,15 @@
         </section>
       </div>
 
-      <button onclick="play()" class="hidden mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--primary"
-        id="play"><i class="material-icons" role="presentation">bug_report</i><span class="visuallyhidden">Play</span>
-      </button>
-
       <footer class="mdl-mini-footer">
         <div class="mdl-mini-footer__right-section">
           <ul class="mdl-mini-footer__link-list">
             <li><a href="https://developers.google.com/web/starter-kit/" target="_blank">Web Starter Kit</a></li>
             <li><a href="https://github.com/sedano" target="_blank">Github</a></li>
+            <li>
+              <a onclick="play()" class="mdl-button mdl-button--icon" id="play"><i class="material-icons" role="presentation">bug_report</i><span class="visuallyhidden">Play</span>
+                </a>
+            </li>
           </ul>
         </div>
       </footer>

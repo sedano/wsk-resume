@@ -96,28 +96,32 @@
     .addEventListener('mdl-componentupgraded', function() {
       this.MaterialProgress.setProgress(30);
     });
+  /*
+    var showPlayButton = function() {
+      $('#play').removeClass('hidden');
+    };
+  */
 
-  var showPlayButton = function() {
-    $('#play').removeClass('hidden');
-  };
+  var nameTimeout;
 
   var hideName = function() {
     $('#lejandro').animate({
       width: '0',
-      opacity: '0',
+      opacity: '0'
     }, 500);
   };
 
   var showName = function() {
+    clearTimeout(nameTimeout);
     $('#lejandro').animate({
       width: '130',
-      opacity: '100',
+      opacity: '100'
     }, 500, function() {
-      setTimeout(hideName, 1000);
+      nameTimeout = setTimeout(hideName, 1000);
     });
   };
 
-  setTimeout(showPlayButton, 30000);
+  // setTimeout(showPlayButton, 1000);
 
   $('#buttonA').click(showName);
 
