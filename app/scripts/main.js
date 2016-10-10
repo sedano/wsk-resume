@@ -72,66 +72,72 @@
         console.error('Error during service worker registration:', e);
       });
   }
+})();
 
-  // Your custom JavaScript goes here
-  /* eslint-env jquery */
-  $('.button--read-more').click(function() {
-    $(this).text($(this).text() === 'Read more' ? 'Hide' : 'Read more');
-    $(this).closest('.mdl-card').find('.hidden-text').toggle('fast');
-  });
-  document.querySelector('#spanish-bar')
-    .addEventListener('mdl-componentupgraded', function() {
-      this.MaterialProgress.setProgress(100);
+// Your custom JavaScript goes here
+/* eslint-env jquery */
+(function defer() {
+  if (window.jQuery) {
+    $('.button--read-more').click(function() {
+      $(this).text($(this).text() === 'Read more' ? 'Hide' : 'Read more');
+      $(this).closest('.mdl-card').find('.hidden-text').toggle('fast');
     });
-  document.querySelector('#english-bar')
-    .addEventListener('mdl-componentupgraded', function() {
-      this.MaterialProgress.setProgress(99);
-    });
-  document.querySelector('#polish-bar')
-    .addEventListener('mdl-componentupgraded', function() {
-      this.MaterialProgress.setProgress(55);
-      this.MaterialProgress.setBuffer(60);
-    });
-  document.querySelector('#german-bar')
-    .addEventListener('mdl-componentupgraded', function() {
-      this.MaterialProgress.setProgress(30);
-    });
-  /*
-    var showPlayButton = function() {
-      $('#play').removeClass('hidden');
+    document.querySelector('#spanish-bar')
+      .addEventListener('mdl-componentupgraded', function() {
+        this.MaterialProgress.setProgress(100);
+      });
+    document.querySelector('#english-bar')
+      .addEventListener('mdl-componentupgraded', function() {
+        this.MaterialProgress.setProgress(99);
+      });
+    document.querySelector('#polish-bar')
+      .addEventListener('mdl-componentupgraded', function() {
+        this.MaterialProgress.setProgress(55);
+        this.MaterialProgress.setBuffer(60);
+      });
+    document.querySelector('#german-bar')
+      .addEventListener('mdl-componentupgraded', function() {
+        this.MaterialProgress.setProgress(30);
+      });
+    /*
+      var showPlayButton = function() {
+        $('#play').removeClass('hidden');
+      };
+    */
+
+    var nameTimeout;
+
+    var hideName = function() {
+      $('#lejandro').animate({
+        width: '0',
+        opacity: '0'
+      }, 500);
     };
-  */
 
-  var nameTimeout;
+    var showName = function() {
+      clearTimeout(nameTimeout);
+      $('#lejandro').animate({
+        width: '130',
+        opacity: '100'
+      }, 500, function() {
+        nameTimeout = setTimeout(hideName, 1000);
+      });
+    };
 
-  var hideName = function() {
-    $('#lejandro').animate({
-      width: '0',
-      opacity: '0'
-    }, 500);
-  };
+    // setTimeout(showPlayButton, 1000);
 
-  var showName = function() {
-    clearTimeout(nameTimeout);
-    $('#lejandro').animate({
-      width: '130',
-      opacity: '100'
-    }, 500, function() {
-      nameTimeout = setTimeout(hideName, 1000);
-    });
-  };
+    $('#buttonA').click(showName);
 
-  // setTimeout(showPlayButton, 1000);
-
-  $('#buttonA').click(showName);
-
-  /*  $(document).ready(function() {
-     console.log('Document ready!');
-     $('.mdl-layout__content').on('swiperight', function() {
-       console.log('Swipe right detected!');
-     });
-     $('.mdl-layout__content').on('swipeleft', function() {
-       console.log('Swipe left detected!');
-     });
-   }); */
+    /*  $(document).ready(function() {
+       console.log('Document ready!');
+       $('.mdl-layout__content').on('swiperight', function() {
+         console.log('Swipe right detected!');
+       });
+       $('.mdl-layout__content').on('swipeleft', function() {
+         console.log('Swipe left detected!');
+       });
+     }); */
+  } else {
+    setTimeout(function() { defer() }, 50);
+  }
 })();
