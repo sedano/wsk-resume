@@ -199,6 +199,7 @@ will be correctly compiled during `gulp serve` and `gulp`
   
   .mdl-demo section > .section__play-btn {
     min-height: 200px;
+    overflow: hidden;
   }
   
   .mdl-demo section > header > .material-icons {
