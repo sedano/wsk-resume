@@ -524,3 +524,39 @@ will be correctly compiled during `gulp serve` and `gulp`
   .mdl-demo .mdl-mini-footer li {
     line-height: 3
   }
+  /*Fix for address bar not hiding in mobile*/
+  
+  .mdl-layout {
+    overflow: visible;
+  }
+  
+  .mdl-layout__drawer {
+    position: fixed;
+  }
+  
+  .mdl-layout__content {
+    display: block;
+    overflow: visible;
+    margin-top: 64px;
+  }
+  
+  .is-small-screen .mdl-layout__content {
+    margin-top: 56px;
+  }
+  
+  .mdl-layout__header {
+    position: fixed;
+  }
+  
+  .mdl-layout__obfuscator {
+    position: fixed;
+  }
+  
+  html, body {
+    overflow-y: auto;
+    min-height: 100%;
+  }
+  
+  mdl-layout {
+    min-height: 100%;
+  }
