@@ -118,6 +118,7 @@ will be correctly compiled during `gulp serve` and `gulp`
   
   .mdl-demo h1.mdl-typography--display-1 {
     margin-top: -64px;
+    text-align: center; 
   }
   
   .mdl-demo .portfolio-panel h1.mdl-typography--display-1 {
