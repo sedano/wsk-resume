@@ -138,6 +138,8 @@
        });
      }); */
   } else {
-    setTimeout(function() { defer() }, 50);
+    setTimeout(function() {
+      defer();
+    }, 50);
   }
 })();
