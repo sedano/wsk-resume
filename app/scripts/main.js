@@ -99,11 +99,6 @@
       .addEventListener('mdl-componentupgraded', function() {
         this.MaterialProgress.setProgress(30);
       });
-    /*
-      var showPlayButton = function() {
-        $('#play').removeClass('hidden');
-      };
-    */
 
     var nameTimeout;
 
@@ -123,20 +118,7 @@
         nameTimeout = setTimeout(hideName, 1000);
       });
     };
-
-    // setTimeout(showPlayButton, 1000);
-
     $('#buttonA').click(showName);
-
-    /*  $(document).ready(function() {
-       console.log('Document ready!');
-       $('.mdl-layout__content').on('swiperight', function() {
-         console.log('Swipe right detected!');
-       });
-       $('.mdl-layout__content').on('swipeleft', function() {
-         console.log('Swipe left detected!');
-       });
-     }); */
   } else {
     setTimeout(function() {
       defer();
