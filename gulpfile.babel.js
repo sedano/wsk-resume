@@ -39,7 +39,7 @@ const reload = browserSync.reload;
 
 // Lint JavaScript
 gulp.task('lint', () =>
-  gulp.src(['app/scripts/**/*.js', '!app/scripts/**/*.ext.js'])
+  gulp.src(['app/scripts/**/*.js', '!app/scripts/**/*.ext.js', '!app/scripts/**/*.min.js'])
     .pipe($.eslint())
     .pipe($.eslint.format())
     .pipe($.if(!browserSync.active, $.eslint.failOnError()))
@@ -68,6 +68,16 @@ gulp.task('copy', () =>
     .pipe($.size({title: 'copy'}))
 );
 
+// Copy iconfont
+gulp.task('iconfont', () =>
+  gulp.src([
+    'app/styles/iconfont/*'
+  ], {
+    dot: true
+  }).pipe(gulp.dest('dist/styles/iconfont'))
+    .pipe($.size({title: 'iconfont'}))
+);
+
 // Compile and automatically prefix stylesheets
 gulp.task('styles', () => {
   const AUTOPREFIXER_BROWSERS = [
@@ -85,7 +95,8 @@ gulp.task('styles', () => {
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
     'app/styles/**/*.scss',
-    'app/styles/**/*.css'
+    'app/styles/**/*.css',
+    '!app/styles/iconfont/*'
   ])
     .pipe($.newer('.tmp/styles'))
     .pipe($.sourcemaps.init())
@@ -110,6 +121,7 @@ gulp.task('scripts', () =>
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
       // './app/scripts/jquery.mobile.custom.ext.js',
+      './app/scripts/material.min.js',
       './app/scripts/main.js',
       './app/scripts/bug.ext.js'
       // Other scripts
@@ -197,7 +209,7 @@ gulp.task('serve:dist', ['default'], () =>
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['lint', 'html', 'scripts', 'images', 'copy'],
+    ['lint', 'html', 'scripts', 'images', 'copy', 'iconfont'],
     'generate-service-worker',
     cb
   )

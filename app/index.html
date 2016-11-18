@@ -8,7 +8,7 @@
 	<meta name="keywords" content="sedano, robotics, engineer, medical, devices, biomimetics, biotechnology, website, portfolio, resume, cv"
 	/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Alejandro Sedano - Landing Page</title>
+	<title>Alejandro Sedano - Robotics and Applied Informatics Engineer</title>
 
 	<!-- Disable tap highlight on IE -->
 	<meta name="msapplication-tap-highlight" content="no">
@@ -55,10 +55,10 @@
     material.blue-orange.min.css
     material.purple-indigo.min.css
     -->
-	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-indigo.min.css">
+	<link rel="stylesheet" href="styles/material.blue-indigo.min.css">
 
 	<!-- Material Design icons -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
 
 	<!-- Your styles -->
 	<link rel="stylesheet" href="styles/main.css">
@@ -132,12 +132,12 @@
 
 							<div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--1-col-tablet mdl-cell--1-col-phone">
 								<div class="section__icon">
-									<i class="material-icons">phone_android</i>
+									<i class="material-icons">headset_mic</i>
 								</div>
 							</div>
 							<div class="section__text mdl-cell mdl-cell--5-col-desktop mdl-cell--7-col-tablet mdl-cell--3-col-phone">
-								<h5>Telephone</h5>
-								<a class="blur" href="tel:+48510383877">+48 510 383 877</a>
+								<h5>Skype</h5>
+								<a href="skype:s.sedano?chat">s.sedano</a>
 							</div>
 
 							<div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--1-col-tablet mdl-cell--1-col-phone">
@@ -463,9 +463,6 @@
 							<span class="mdl-chip mdl-color--orange ">
                 <span class="mdl-chip__text mdl-color-text--white">Python</span>
 							</span>
-							<span class="mdl-chip mdl-color--orange ">
-                <span class="mdl-chip__text mdl-color-text--white">C</span>
-							</span>
 
 							<span class="mdl-chip mdl-color--red-600 ">
                 <span class="mdl-chip__text mdl-color-text--white">MATLAB</span>
@@ -493,9 +490,6 @@
 							</span>
 							<span class="mdl-chip mdl-color--teal ">
                 <span class="mdl-chip__text mdl-color-text--white">Ansys</span>
-							</span>
-							<span class="mdl-chip mdl-color--teal ">
-                <span class="mdl-chip__text mdl-color-text--white">MakerBot</span>
 							</span>
 							<span class="mdl-chip mdl-color--teal ">
                 <span class="mdl-chip__text mdl-color-text--white">GD&amp;T</span>
@@ -664,10 +658,10 @@
 		</main>
 	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.2.1/material.min.js" async></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" async></script>
 	<!-- build:js scripts/main.min.js -->
 	<!--<script src="scripts/jquery.mobile.custom.ext.js" defer></script>-->
+	<script src="scripts/material.min.js" async></script>
 	<script src="scripts/main.js" async></script>
 	<!-- endbuild -->
 
@@ -679,10 +673,6 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-29193383-1', 'auto');
       ga('send', 'pageview');
-
-      function play() {
-        new BugController();
-      }
 
 		var $buoop = {vs:{i:11,f:-8,o:-8,s:9,c:-8},mobile:false,c:4,text:'This site may not display correctly in your browser (%s). Please <a%s>update</a> it for more security and the best experience on this site.'}; 
 		function $buo_f(){ 
