@@ -120,7 +120,7 @@ gulp.task('scripts', () =>
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
-      // './app/scripts/jquery.mobile.custom.ext.js',
+      './app/scripts/jquery.min.js',
       './app/scripts/material.min.js',
       './app/scripts/main.js',
       './app/scripts/bug.ext.js'
@@ -254,6 +254,7 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
       `${rootDir}/images/**/*`,
       `${rootDir}/scripts/**/*.js`,
       `${rootDir}/styles/**/*.css`,
+      `${rootDir}/styles/iconfont/*`,
       `${rootDir}/*.{html,json}`
     ],
     // Translates a static file path to the relative URL that it's served from.
