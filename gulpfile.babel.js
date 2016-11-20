@@ -122,8 +122,7 @@ gulp.task('scripts', () =>
       //       to be correctly concatenated
       './app/scripts/jquery.min.js',
       './app/scripts/material.min.js',
-      './app/scripts/main.js',
-      './app/scripts/bug.ext.js'
+      './app/scripts/main.js'
       // Other scripts
     ])
       .pipe($.newer('.tmp/scripts'))
